@@ -1,0 +1,1 @@
+I built a dynamic portfolio website with a contact system using JavaScript, Google Apps Script, and Google Sheets. The system handles form submissions, stores messages in Google Sheets, sends email notifications, and includes an admin dashboard for viewing submitted messages.
