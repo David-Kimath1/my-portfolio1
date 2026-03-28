@@ -12,9 +12,6 @@ https://my-portfolio1-weld.vercel.app/
 
 ## Screenshots
 
-### Home Page
-![Home Page](assets/dave.png)
-
 ### Contact Form
 ![Contact Form](assets/contact.png)
 
