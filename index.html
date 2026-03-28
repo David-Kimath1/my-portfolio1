@@ -3,20 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>David Kimathi | Frontend Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 
 <body>
-    <!--HOME PAGE-->
-
+    <!-- HOME SECTION with Video Background -->
     <div class="home">
-        <video autoplay muted loop id="bg-video">
-            <source src="images/videoplayback.mp4">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop id="bg-video" playsinline>
+            <source src="images/videoplayback.mp4" type="video/mp4">
         </video>
 
         <section id="home">
@@ -25,348 +24,282 @@
             </div>
 
             <nav class="nav__bar">
-                <a href="#home">Home</a>
-                <a href="#about-me">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#services">Services</a>
-                <a href="https://github.com/itsybitsyspyda?tab=repositories" target="_blank"">Projects</a>
-                <a href=" #contacts">Contacts</a>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about-me" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="https://github.com/itsybitsyspyda?tab=repositories" target="_blank"
+                    class="nav-link">Projects</a>
+                <a href="#contacts" class="nav-link">Contacts</a>
             </nav>
-            <div class="mainsection">
 
+            <div class="mainsection">
                 <div class="intro">
-                    <h1>Hello,<span>I'm David Kimathi</span></h1>
+                    <h1>Hello, <span>I'm David Kimathi</span></h1>
                 </div>
                 <div class="im-a">
-                    <h2>I'm A <span>Frontend Web Developer</span></h2>
+                    <h2>I'm A <span class="typing-span">Frontend Web Developer</span></h2>
                 </div>
-
                 <div class="btn__box">
-                    <a href="#">Services</a>
-                    <a href="https://github.com/itsybitsyspyda?tab=repositories" target="_blank"">Projects</a>
+                    <a href="#services" class="btn-services">Services</a>
+                    <a href="https://github.com/itsybitsyspyda?tab=repositories" target="_blank"
+                        class="btn-projects">Projects</a>
                 </div>
             </div>
         </section>
     </div>
 
-    <!--ABOUT ME PAGE-->
-    <section id=" about-me">
-
-                        <div class="about__me">
-
-                            <div class="about">
-                                <h1>About Me</h1>
-                            </div>
-                            <table class="about-table">
-                                <tr>
-                                    <td rowspan="4">
-                                        <img src="images/profile image.jpg" alt="Your Profile Picture"
-                                            class="about-img">
-                                    </td>
-                                    <td><strong>Name:</strong> David Kimathi</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Profession:</strong> Frontend Web Developer</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Skills:</strong> HTML, CSS, JavaScript</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="about-text">
-                                            I am a passionate web developer who loves creating beautiful and functional
-                                            websites.
-                                            I specialize in front-end development and constantly learn new technologies
-                                            to improve my
-                                            skills.
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="social-links">
-                                        <a href="https://github.com/itsybitsyspyda?tab=repositories"
-                                            target="_blank">GitHub</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-        </section>
-
-        <!--MY SKILLS-->
-        <section id="skills">
-            <div class="my__skills">
-                <div class="name__tag">
-                    <h1>My Skills</h1>
+    <!-- ABOUT ME SECTION -->
+    <section id="about-me" class="fade-section">
+        <div class="about__me">
+            <div class="about">
+                <h1>About Me</h1>
+            </div>
+            <div class="about-card">
+                <div class="about-img-wrapper">
+                    <img src="images/profile image1.jpg" alt="David Kimathi Profile" class="about-img">
                 </div>
-                <div class="container">
-                    <div class="skill-box">
-                        <span class="title">HTML</span>
-                        <div class="skill-bar">
-                            <span class="skill-per html" data-percent="93">
-                                <span class="tooltip">0%</span>
-                            </span>
-                        </div>
+                <div class="about-info">
+                    <p><strong>Name:</strong> David Kimathi</p>
+                    <p><strong>Profession:</strong> Frontend Web Developer</p>
+                    <p><strong>Skills:</strong> HTML, CSS, JavaScript, React, Python</p>
+                    <p class="about-text">
+                        I am a passionate web developer who loves creating beautiful and functional websites.
+                        I specialize in front-end development and constantly learn new technologies to improve my
+                        skills.
+                        With a keen eye for design and user experience, I build responsive applications that work
+                        seamlessly across all devices.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/itsybitsyspyda?tab=repositories" target="_blank"
+                            class="github-link">
+                            <i class="fab fa-github"></i> Surf Through My GitHub
+                        </a>
+                        <a href="assets/David_Kimathi_CV.pdf" download class="cv-link">
+                            <i class="fas fa-download"></i> Download My CV
+                        </a>
                     </div>
-                    <div class="skill-box">
-                        <span class="title">CSS</span>
-                        <div class="skill-bar">
-                            <span class="skill-per css" data-percent="85">
-                                <span class="tooltip">0%</span>
-                            </span>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="fade-section">
+        <div class="my__skills">
+            <div class="name__tag">
+                <h1>My Skills</h1>
+                <p class="skills-subtitle">Professional expertise & proficiency levels</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-box">
+                    <div class="skill-header">
+                        <span class="title">HTML5</span>
+                        <span class="skill-percentage">0%</span>
                     </div>
-                    <div class="skill-box">
-                        <span class="title">JavaScript</span>
-                        <div class="skill-bar">
-                            <span class="skill-per javascript" data-percent="55">
-                                <span class="tooltip">0%</span>
-                            </span>
-                        </div>
+                    <div class="skill-bar">
+                        <span class="skill-per html" data-percent="93">
+                            <span class="tooltip">0%</span>
+                        </span>
                     </div>
-                    <div class="skill-box">
-                        <span class="title">C Programming</span>
-                        <div class="skill-bar">
-                            <span class="skill-per nodejs" data-percent="50">
-                                <span class="tooltip">0%</span>
-                            </span>
-                        </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header">
+                        <span class="title">CSS3 / Tailwind</span>
+                        <span class="skill-percentage">0%</span>
                     </div>
-                    <div class="skill-box">
-                        <span class="title">Java Language</span>
-                        <div class="skill-bar">
-                            <span class="skill-per nodejs" data-percent="50">
-                                <span class="tooltip">0%</span>
-                            </span>
-                        </div>
+                    <div class="skill-bar">
+                        <span class="skill-per css" data-percent="85">
+                            <span class="tooltip">0%</span>
+                        </span>
                     </div>
-                    <div class="skill-box">
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header">
+                        <span class="title">JavaScript / ES6+</span>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-per javascript" data-percent="65">
+                            <span class="tooltip">0%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header">
+                        <span class="title">React.js</span>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-per react" data-percent="55">
+                            <span class="tooltip">0%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header">
                         <span class="title">Python</span>
-                        <div class="skill-bar">
-                            <span class="skill-per nodejs" data-percent="40">
-                                <span class="tooltip">0%</span>
-                            </span>
-                        </div>
+                        <span class="skill-percentage">0%</span>
                     </div>
-                    <div class="skill-box">
-                        <span class="title">Linux</span>
-                        <div class="skill-bar">
-                            <span class="skill-per nodejs" data-percent="40">
-                                <span class="tooltip">0%</span>
-                            </span>
-                        </div>
+                    <div class="skill-bar">
+                        <span class="skill-per python" data-percent="45">
+                            <span class="tooltip">0%</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="skill-box">
+                    <div class="skill-header">
+                        <span class="title">Linux / Git</span>
+                        <span class="skill-percentage">0%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-per linux" data-percent="50">
+                            <span class="tooltip">0%</span>
+                        </span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--MY SERVICES-->
-        <section id="services" class="services__section">
-            <h1 class="section__title">
-                My Services
-            </h1>
-            <div class="services__container">
-                <div class="service__card">
-                    <div class="service__front">
-                        <i class="fas fa-code"></i>
-                        <h3>Web Development</h3>
-                    </div>
-                    <div class="service__back">
-                        <p>Creating responsive and interactive websites with modern technologies.</p>
-                    </div>
+    <!-- SERVICES SECTION - REDESIGNED -->
+    <section id="services" class="services__section fade-section">
+        <h1 class="section__title">My Services</h1>
+        <p class="services-subtitle">What I can do for you</p>
+        <div class="services__container">
+            <!-- Web Development -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-code"></i>
                 </div>
-                <div class="service__card">
-                    <div class="service__front">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Mobile Optimization</h3>
-                    </div>
-                    <div class="service__back">
-                        <p>
-                            I make websites fully responsive and mobile-friendly, <br>ensuring they look great and
-                            function smoothly on any device.
-                        </p>
-                    </div>
-                </div>
-                <div class="service__card">
-                    <div class="service__front">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h3>Web interactivity</h3>
-                    </div>
-                    <div class="service__back">
-                        <p>Ensuring websites are mobile-friendly and responsive.</p>
-                    </div>
-                </div>
-
+                <h3>Web Development</h3>
+                <p>Responsive modern websites using HTML, CSS, JS, React. Portfolios, business sites, dashboards.</p>
+                <div class="service__hover-effect"></div>
             </div>
-        </section>
 
-
-        <!-- CONTACT SECTION -->
-        <section id="contacts">
-            <form class="contact__form" id="contactForm">
-                <div class="contacts">
-                    <div class="contact__header">
-                        <h1>Get In Touch With Me</h1>
-                        <p>Have a question or want to collaborate?</p>
-                    </div>
-
-                    <div class="input">
-                        <label>Name</label>
-                        <input type="text" name="name" id="name" required>
-                        <span class="error-message" id="nameError"></span>
-                    </div>
-
-                    <div class="input">
-                        <label>Email</label>
-                        <input type="email" name="email" id="email" required>
-                        <span class="error-message" id="emailError"></span>
-                    </div>
-
-                    <div class="input">
-                        <label>Message</label>
-                        <textarea name="message" id="message" rows="6" required></textarea>
-                        <span class="error-message" id="messageError"></span>
-                    </div>
-
-                    <button type="submit" id="submitBtn">Send Message</button>
-                    <div id="formMessage" style="margin-top: 15px;"></div>
+            <!-- Mobile Optimization -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-mobile-alt"></i>
                 </div>
-            </form>
-        </section>
+                <h3>Mobile Optimization</h3>
+                <p>Fully responsive designs that work flawlessly on any device or screen size.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-        <style>
-            .error-message {
-                color: #ff4444;
-                font-size: 12px;
-                display: block;
-                margin-top: 5px;
-            }
+            <!-- Web Interactivity -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Web Interactivity</h3>
+                <p>Dynamic animations, forms, real-time interactions using modern JavaScript.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-            .success-message {
-                color: #00cc66;
-                background: #e6ffe6;
-                padding: 10px;
-                border-radius: 5px;
-                margin-top: 10px;
-            }
+            <!-- Coding Tutor -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>Coding Tutor</h3>
+                <p>Teach HTML, CSS, JavaScript with practical examples and project-based learning.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-            .error-message-display {
-                color: #ff4444;
-                background: #ffe6e6;
-                padding: 10px;
-                border-radius: 5px;
-                margin-top: 10px;
-            }
+            <!-- AI Assistant -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI Assistant Dev</h3>
+                <p>Intelligent chatbots and virtual assistants with voice interaction and dynamic responses.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-            button:disabled {
-                opacity: 0.6;
-                color: red;
-                cursor: not-allowed;
-            }
+            <!-- Desktop Applications -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Desktop App Development</h3>
+                <p>Desktop applications using VB.NET and Microsoft Access for data management.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-            button {
-                height: 35px;
-                width: 155px;
-                border-radius: 8px;
-                border: 2px solid #007bff;
-                background: #007bff;
-                color: white;
-                font-size: large;
-                cursor: pointer;
-            }
+            <!-- Website Maintenance -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Website Maintenance</h3>
+                <p>Ongoing support, updates, bug fixes to keep your website running smoothly.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-            button:hover {
-                box-shadow: 9px 13px 11px #007bff;
-                transform: scale(1.1);
-                transition: .5s;
-                border: 2px solid rgb(76, 153, 236);
-                background: rgb(60, 154, 255);
-            }
-        </style>
+            <!-- Computer Setup -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Computer Setup</h3>
+                <p>Set up computers, install software, fix issues, and optimize system performance.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-        <script>
-            // REPLACE WITH YOUR GOOGLE APPS SCRIPT URL
-            const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyvZtyPtwu8gibwPwlqam4KiYx8OUB3sLcBxF_WQmic7XJqwst0wqS4MYtI2UcjHm4Q5Q/exec";
+            <!-- Network Setup -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Network Setup</h3>
+                <p>Configure routers, LAN networks, and internet connections for homes and businesses.</p>
+                <div class="service__hover-effect"></div>
+            </div>
 
-            document.getElementById('contactForm').addEventListener('submit', async function (e) {
-                e.preventDefault();
+            <!-- System Installation -->
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>System Installation</h3>
+                <p>Install operating systems, drivers, and maintain systems for reliability and efficiency.</p>
+                <div class="service__hover-effect"></div>
+            </div>
+        </div>
+    </section>
 
-                // Clear previous messages
-                document.getElementById('formMessage').innerHTML = '';
-                document.getElementById('nameError').innerHTML = '';
-                document.getElementById('emailError').innerHTML = '';
-                document.getElementById('messageError').innerHTML = '';
+    <!-- CONTACT SECTION -->
+    <section id="contacts" class="fade-section">
+        <form class="contact__form" id="contactForm">
+            <div class="contacts">
+                <div class="contact__header">
+                    <h1>Get In Touch</h1>
+                    <p>Have a question or want to collaborate? Let's talk!</p>
+                </div>
+                <div class="input">
+                    <label><i class="far fa-user"></i> Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your full name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="input">
+                    <label><i class="far fa-envelope"></i> Email</label>
+                    <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="input">
+                    <label><i class="far fa-comment"></i> Message</label>
+                    <textarea name="message" id="message" rows="5" placeholder="Your message here..."
+                        required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                <button type="submit" id="submitBtn">Send Message <i class="fas fa-paper-plane"></i></button>
+                <div id="formMessage"></div>
+            </div>
+        </form>
+    </section>
 
-                // Get form values
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const message = document.getElementById('message').value.trim();
-
-                // Validate
-                let isValid = true;
-
-                if (!name) {
-                    document.getElementById('nameError').innerHTML = 'Name is required';
-                    isValid = false;
-                }
-
-                if (!email) {
-                    document.getElementById('emailError').innerHTML = 'Email is required';
-                    isValid = false;
-                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                    document.getElementById('emailError').innerHTML = 'Please enter a valid email';
-                    isValid = false;
-                }
-
-                if (!message) {
-                    document.getElementById('messageError').innerHTML = 'Message is required';
-                    isValid = false;
-                }
-
-                if (!isValid) return;
-
-                // Disable button and show loading
-                const submitBtn = document.getElementById('submitBtn');
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Sending...';
-                document.getElementById('formMessage').innerHTML = '<div class="success-message">📤 Sending your message...</div>';
-
-                try {
-                    // Create form data
-                    const formData = new URLSearchParams();
-                    formData.append('name', name);
-                    formData.append('email', email);
-                    formData.append('message', message);
-
-                    // Send to Google Sheets
-                    const response = await fetch(SCRIPT_URL, {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    const result = await response.text();
-
-                    if (result === 'Success') {
-                        document.getElementById('formMessage').innerHTML = '<div class="success-message">✓ Message sent successfully! Redirecting...</div>';
-                        document.getElementById('contactForm').reset();
-
-                        // Redirect to thank you page after 2 seconds
-                        setTimeout(() => {
-                            window.location.href = 'thank-you.html';
-                        }, 2000);
-                    } else {
-                        throw new Error(result);
-                    }
-
-                } catch (error) {
-                    console.error('Error:', error);
-                    document.getElementById('formMessage').innerHTML = '<div class="error-message-display">❌ Failed to send message. Please try again.</div>';
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Send Message';
-                }
-            });
-        </script>
-
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
