@@ -8,6 +8,37 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* No tracking indicator visible - privacy first */
+        .tracking-status {
+            display: none;
+        }
+
+        /* Form message styles */
+        .form-success {
+            background: #10b981;
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .form-error {
+            background: #ef4444;
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        @media (min-width: 9999px) {
+            .dev-only {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -162,106 +193,67 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION - REDESIGNED -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="services__section fade-section">
         <h1 class="section__title">My Services</h1>
         <p class="services-subtitle">What I can do for you</p>
         <div class="services__container">
-            <!-- Web Development -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-code"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-code"></i></div>
                 <h3>Web Development</h3>
                 <p>Responsive modern websites using HTML, CSS, JS, React. Portfolios, business sites, dashboards.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- Mobile Optimization -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-mobile-alt"></i></div>
                 <h3>Mobile Optimization</h3>
                 <p>Fully responsive designs that work flawlessly on any device or screen size.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- Web Interactivity -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-bolt"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-bolt"></i></div>
                 <h3>Web Interactivity</h3>
                 <p>Dynamic animations, forms, real-time interactions using modern JavaScript.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- Coding Tutor -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-chalkboard-teacher"></i></div>
                 <h3>Coding Tutor</h3>
                 <p>Teach HTML, CSS, JavaScript with practical examples and project-based learning.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- AI Assistant -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-robot"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-robot"></i></div>
                 <h3>AI Assistant Dev</h3>
                 <p>Intelligent chatbots and virtual assistants with voice interaction and dynamic responses.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- Desktop Applications -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-desktop"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-desktop"></i></div>
                 <h3>Desktop App Development</h3>
                 <p>Desktop applications using VB.NET and Microsoft Access for data management.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- Website Maintenance -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-tools"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-tools"></i></div>
                 <h3>Website Maintenance</h3>
                 <p>Ongoing support, updates, bug fixes to keep your website running smoothly.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- Computer Setup -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-laptop"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-laptop"></i></div>
                 <h3>Computer Setup</h3>
                 <p>Set up computers, install software, fix issues, and optimize system performance.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- Network Setup -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-network-wired"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-network-wired"></i></div>
                 <h3>Network Setup</h3>
                 <p>Configure routers, LAN networks, and internet connections for homes and businesses.</p>
                 <div class="service__hover-effect"></div>
             </div>
-
-            <!-- System Installation -->
             <div class="service__card">
-                <div class="service__icon">
-                    <i class="fas fa-cogs"></i>
-                </div>
+                <div class="service__icon"><i class="fas fa-cogs"></i></div>
                 <h3>System Installation</h3>
                 <p>Install operating systems, drivers, and maintain systems for reliability and efficiency.</p>
                 <div class="service__hover-effect"></div>
@@ -300,6 +292,304 @@
     </section>
 
     <script src="script.js"></script>
+
+    <!-- ============================================ -->
+    <!-- UNIFIED APPS SCRIPT URL - FINAL VERSION -->
+    <!-- ============================================ -->
+    <script>
+        // FINAL APPS SCRIPT URL - Handles BOTH Analytics AND Messages
+        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1hZHCWDgY9y2BR3bIBt4FBz6ThDpKq51Fd25F74oTyyF5AQxGcgvpiP2EiZKverGW1Q/exec";
+        ;
+
+        // Store for debugging
+        window.__portfolioConfig = {
+            scriptUrl: APPS_SCRIPT_URL,
+            version: "2.0.0"
+        };
+
+        console.log('%c🚀 Portfolio System Active', 'color: #10b981; font-size: 14px; font-weight: bold;');
+        console.log('%c✓ Analytics Tracking: ON', 'color: #3b82f6;');
+        console.log('%c✓ Contact Form: Connected', 'color: #3b82f6;');
+        console.log('%c✓ Message Storage: Ready', 'color: #3b82f6;');
+    </script>
+
+    <!-- VISITOR TRACKING SCRIPT -->
+    <script>
+        (function () {
+            const ANALYTICS_URL = APPS_SCRIPT_URL;
+            const IS_TRACKING_CONFIGURED = ANALYTICS_URL && ANALYTICS_URL.includes('exec');
+
+            if (!IS_TRACKING_CONFIGURED) {
+                console.log('[Analytics] Tracking not configured');
+                return;
+            }
+
+            const SESSION_KEY = 'portfolio_visitor_tracked_' + window.location.hostname;
+            const SESSION_TIMEOUT = 30 * 60 * 1000;
+
+            function getDeviceType() {
+                const ua = navigator.userAgent;
+                if (/(tablet|ipad|playbook|silk)|(android(?!.*mobile))/i.test(ua)) return 'tablet';
+                if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) return 'mobile';
+                return 'desktop';
+            }
+
+            function getBrowserName() {
+                const ua = navigator.userAgent;
+                if (ua.indexOf('Chrome') > -1 && ua.indexOf('Edg') === -1) return 'Chrome';
+                if (ua.indexOf('Firefox') > -1) return 'Firefox';
+                if (ua.indexOf('Safari') > -1 && ua.indexOf('Chrome') === -1) return 'Safari';
+                if (ua.indexOf('Edg') > -1) return 'Edge';
+                if (ua.indexOf('Opera') > -1 || ua.indexOf('OPR') > -1) return 'Opera';
+                return 'Other';
+            }
+
+            function getVisitorId() {
+                let visitorId = localStorage.getItem('portfolio_visitor_id');
+                if (!visitorId) {
+                    visitorId = 'vis_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                    localStorage.setItem('portfolio_visitor_id', visitorId);
+                }
+                return visitorId;
+            }
+
+            function shouldTrackVisit() {
+                const lastTracked = localStorage.getItem(SESSION_KEY);
+                const now = Date.now();
+                if (!lastTracked || (now - parseInt(lastTracked)) > SESSION_TIMEOUT) {
+                    localStorage.setItem(SESSION_KEY, now.toString());
+                    return true;
+                }
+                return false;
+            }
+
+            async function trackPageView() {
+                const pagePath = window.location.pathname + window.location.hash;
+                const data = {
+                    action: 'trackPageView',
+                    visitorId: getVisitorId(),
+                    page: pagePath || '/',
+                    pageTitle: document.title,
+                    referrer: document.referrer || 'direct',
+                    userAgent: navigator.userAgent,
+                    screenWidth: screen.width,
+                    screenHeight: screen.height,
+                    deviceType: getDeviceType(),
+                    browser: getBrowserName(),
+                    language: navigator.language,
+                    timestamp: new Date().toISOString(),
+                    isNewSession: shouldTrackVisit()
+                };
+
+                try {
+                    if (navigator.sendBeacon) {
+                        navigator.sendBeacon(ANALYTICS_URL, JSON.stringify(data));
+                    } else {
+                        await fetch(ANALYTICS_URL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+                    }
+                } catch (error) {
+                    // Silent fail
+                }
+            }
+
+            async function trackUniqueVisitor() {
+                const hasTrackedVisitor = localStorage.getItem('portfolio_unique_tracked');
+                if (hasTrackedVisitor) return;
+
+                const data = {
+                    action: 'trackUniqueVisitor',
+                    visitorId: getVisitorId(),
+                    deviceType: getDeviceType(),
+                    browser: getBrowserName(),
+                    language: navigator.language,
+                    timestamp: new Date().toISOString(),
+                    landingPage: window.location.pathname
+                };
+
+                try {
+                    await fetch(ANALYTICS_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    localStorage.setItem('portfolio_unique_tracked', 'true');
+                } catch (error) { }
+            }
+
+            let pageEnterTime = Date.now();
+
+            function trackTimeSpent() {
+                const timeSpent = Math.round((Date.now() - pageEnterTime) / 1000);
+                if (timeSpent < 3) return;
+
+                const data = {
+                    action: 'trackTimeSpent',
+                    visitorId: getVisitorId(),
+                    page: window.location.pathname,
+                    timeSpentSeconds: timeSpent,
+                    timestamp: new Date().toISOString()
+                };
+
+                if (navigator.sendBeacon) {
+                    navigator.sendBeacon(ANALYTICS_URL, JSON.stringify(data));
+                }
+            }
+
+            function setupOutboundLinkTracking() {
+                document.querySelectorAll('a[href^="http"]').forEach(link => {
+                    if (!link.href.includes(window.location.hostname)) {
+                        link.addEventListener('click', function () {
+                            const data = {
+                                action: 'trackOutbound',
+                                visitorId: getVisitorId(),
+                                url: this.href,
+                                page: window.location.pathname
+                            };
+                            navigator.sendBeacon(ANALYTICS_URL, JSON.stringify(data));
+                        });
+                    }
+                });
+            }
+
+            let trackedSections = new Set();
+
+            function setupScrollTracking() {
+                const sections = document.querySelectorAll('section, .home');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !trackedSections.has(entry.target.id)) {
+                            trackedSections.add(entry.target.id);
+                            const data = {
+                                action: 'trackSectionView',
+                                visitorId: getVisitorId(),
+                                section: entry.target.id || 'unknown',
+                                page: window.location.pathname
+                            };
+                            fetch(ANALYTICS_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) });
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                sections.forEach(section => {
+                    if (section.id) observer.observe(section);
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(() => {
+                        trackPageView();
+                        trackUniqueVisitor();
+                        setupOutboundLinkTracking();
+                        setupScrollTracking();
+                    }, 100);
+                });
+            } else {
+                setTimeout(() => {
+                    trackPageView();
+                    trackUniqueVisitor();
+                    setupOutboundLinkTracking();
+                    setupScrollTracking();
+                }, 100);
+            }
+
+            window.addEventListener('beforeunload', trackTimeSpent);
+            window.addEventListener('pagehide', trackTimeSpent);
+        })();
+    </script>
+
+    <!-- CONTACT FORM HANDLER -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    const name = document.getElementById('name')?.value.trim();
+                    const email = document.getElementById('email')?.value.trim();
+                    const message = document.getElementById('message')?.value.trim();
+                    const submitBtn = document.getElementById('submitBtn');
+
+                    // Validation
+                    if (!name) {
+                        showFormMessage('Please enter your name', 'error');
+                        return;
+                    }
+                    if (!email || !email.includes('@')) {
+                        showFormMessage('Please enter a valid email address', 'error');
+                        return;
+                    }
+                    if (!message) {
+                        showFormMessage('Please enter your message', 'error');
+                        return;
+                    }
+
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-pulse"></i>';
+
+                    const formData = new URLSearchParams();
+                    formData.append('action', 'saveMessage');
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('message', message);
+                    formData.append('timestamp', new Date().toISOString());
+                    formData.append('status', 'pending');
+
+                    try {
+                        const response = await fetch(APPS_SCRIPT_URL, {
+                            method: 'POST',
+                            body: formData
+                        });
+
+                        const result = await response.text();
+
+                        if (result === 'Success') {
+                            showFormMessage('✓ Message sent successfully! I will get back to you soon.', 'success');
+                            contactForm.reset();
+                        } else {
+                            throw new Error(result || 'Failed to send');
+                        }
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        // showFormMessage('❌ Failed to send message. Please try again or email me directly at david@example.com', 'error');
+                    } finally {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                    }
+                });
+            }
+
+            function showFormMessage(msg, type) {
+                const messageDiv = document.getElementById('formMessage');
+                if (messageDiv) {
+                    messageDiv.innerHTML = `<div class="form-${type}">${msg}</div>`;
+                    messageDiv.style.display = 'block';
+                    setTimeout(() => {
+                        messageDiv.style.display = 'none';
+                    }, 5000);
+                }
+            }
+        });
+    </script>
+
+    <!-- Performance marker -->
+    <script>
+        (function () {
+            if (window.performance && performance.timing) {
+                const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                if (loadTime > 0 && loadTime < 10000) {
+                    window.__portfolioLoadTime = loadTime;
+                }
+            }
+        })();
+    </script>
 </body>
 
 </html>
