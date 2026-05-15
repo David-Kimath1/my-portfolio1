@@ -10,22 +10,6 @@ https://my-portfolio1-weld.vercel.app/
 
 ---
 
-## Screenshots
-
-### Contact Form
-![Contact Form](assets/contact.png)
-
-### Message Sent Confirmation
-![Message Sent](assets/message-sent.png)
-
-### Admin - Messages View
-![Admin Messages](assets/admin-message.png)
-
-### Admin - Reply System
-![Admin Reply](assets/admin-reply.png)
-
----
-
 ## Features
 
 - Modern responsive UI design
@@ -76,7 +60,7 @@ The admin dashboard allows:
 
 ## Author
 
-Built by David Kimathi (itsybitsyspyda)
+Built by David Kimathi
 
 ---
 
